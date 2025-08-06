@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 
-const navbar = () => {
+const Navbar = () => {
   useGSAP(()=>{
     const navTween = gsap.timeline({
       scrollTrigger: {
@@ -15,7 +15,7 @@ const navbar = () => {
     });
     navTween.fromTo('nav', {backgroundColor: 'transparent'}, {
       backgroundColor: '#00000050',
-      backgroundFilter: 'blur(10px)',
+      backdropFilter: 'blur(10px)',
       duration: 1,
       ease: 'power1.inOut'
     })
@@ -39,4 +39,4 @@ const navbar = () => {
   )
 }
 
-export default navbar
+export default Navbar
